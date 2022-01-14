@@ -19,11 +19,11 @@
         <div class="profil">
           <div class="profile__avatar"></div>
           <div class="profile__info">
-            <h2 class="profile__name">Жак-Ив Кусто<button class="button profile__edit-button"></button></h2>
+            <h2 class="profile__name">Жак-Ив Кусто<a href="#" class="button profile__edit-button"></a></h2>
             <p class="profile__text">Исследователь океана</p>
           </div>
         </div>
-        <button class="button profile__add-button"></button>
+        <a href="#" class="button profile__add-button"></a>
       </section>
       <section class="cards">
         <ul class="card cards__card">
@@ -71,6 +71,17 @@
           </li>
         </ul>
       </section>
+      <div class="popup popup_opened">
+        <div class="popup__container">
+          <form action="" class="popup__form form">
+            <a href="#" class="form__close"></a>
+            <h3 class="form__header">Редактировать профиль</h3>
+            <input type="text" class="form__text">
+            <input type="text" class="form__text">
+            <input type="submit" class="form__buttod" value="Сохранить">Сохранить
+          </form>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <p class="footer__author">&copy;2021 Сергей Веселов</p>
