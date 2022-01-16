@@ -1,0 +1,23 @@
+.form__close {
+    background-image:url(../../../images/popup/Close\ Icon.svg);
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: -40px;
+    top: -40px;
+  }
+  
+  .form__close:hover {
+    opacity: 0.6;
+  }
+  
+@media screen and (max-width: 640px) {
+    .form__close {
+      max-width: 20px;
+      max-height: 20px;
+      position: absolute;
+      right: 0;
+      top: -36px;
+    }
+  }
