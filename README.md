@@ -9,5 +9,5 @@
 - с применением технологий: Flexbox верстка и ”Grid Layout“;
 - реализован попап редактирования профиля. (Открытие и закрытие попапа, редактирование имени и информации о себе).
 
-[Работа выложенна на GitHub Pages] (https://keepsake666.github.io/russian-travel/index.html)
+[Работа выложенна на GitHub Pages] (https://keepsake666.github.io/mesto/index.html)
 
