@@ -1,6 +1,21 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/font/Inter-3/InterWeb/inter.css);
-.body {
+@import url(../blocks/body/body.css);
+@import url(../blocks/page/page.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__border/header__border.css);
+
+
+
+
+
+
+
+
+
+
+
+/* .body {
   background-color: #000000;
   font-family: "inter", 'Arial', 'Helvetica', sans-serif;
   -moz-osx-font-smoothing: grayscale;
@@ -20,11 +35,11 @@
   max-width: 880px;
   margin: 0 auto;
   overflow: hidden;
-}
+} */
 
 /* -------------------------header------------ */
 
-.header {
+/* .header {
 }
 
 .header__logo {
@@ -34,19 +49,19 @@
   width: 142px;
   height: 33px;
   margin: 45px 0 41px;
-}
+} */
 
-.border {
+/* .header__border {
   border-bottom: 1px solid #545454 ;
   opacity: 0.7;
   margin-bottom: 40px;
-}
+} */
 
-@media screen and (max-width: 890px) {
+/* @media screen and (max-width: 890px) {
   .header__logo {
   margin: 28px 0 31px 27px;
   }
-}
+} */
 
 
 /* -------------------------profile----------------------- */
@@ -56,23 +71,24 @@
   align-items: center;
 }
 
-.profil {
+.profile__container {
   display: flex;
+  max-width: 50%;
 }
 
 .profile__avatar {
   background-image: url(../images/profile/image.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 120px;
-  height: 120px;
+  min-width: 120px;
+  min-height: 120px;
   border-radius: 100px; 
   margin-right: 30px;
 }
 
 .profile__info {
-  /* display: flex; */
   margin: auto;
+  max-width: 100%;
 }
 
 .profile_redact {
@@ -85,13 +101,19 @@
   font-weight: 500;
   font-size: 42px;
   line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .profile__text {
-  margin: 0 auto;
+  margin: 0;
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .profile__edit-button {
@@ -99,8 +121,8 @@
   background-image: url(../images/profile/Vector-2.svg); 
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  width: 24px;
-  height: 24px; 
+  min-width: 24px;
+  min-height: 24px; 
   border: 1px solid #FFFFFF;
   box-sizing: border-box;
   background-color: #000000;
@@ -134,8 +156,9 @@
     width: 282px;
   }
 
-  .profil {
+  .profile__container {
     flex-direction: column;
+    max-width: 90%;
   }
 
   .profile__avatar {
@@ -191,7 +214,7 @@ margin-top: 50px;
   background-color: #FFFFFF;
   border-radius: 10px;
   width: 282px;
-height: 361px;
+  height: 361px;
 }
 
 .card__image {
@@ -260,37 +283,38 @@ height: 361px;
 /* ------------popup------------ */
 .popup {
   position: fixed;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  margin: 0 auto;
   top: 0;
   left: 0;
   display: none;
 }
 
  .popup_opened {
-  display: block;
+  display: flex;
 }
 
 .popup__container {
-  margin: 195px auto 0;
-  max-width: 430px;
-  max-height: 330px;
   position: relative;
+  max-height: 100%;
 }
 
 .popup__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  background: #FFFFFF;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
+  
 }
 
 .form {
+  width: 430px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
 }
 
 .form__header {
@@ -299,6 +323,7 @@ height: 361px;
   font-size: 24px;
   line-height: 29px;
   color: black;
+  margin: 34px 0 41px;
 }
 
 .form__text {
@@ -313,6 +338,11 @@ height: 361px;
   line-height: 17px;
   background-color: white;
   color: #000000;
+  margin-bottom: 16px;
+}
+
+.form .form__text:last-child {
+  margin-bottom: 0;
 }
 
 .form__text:focus {
@@ -328,9 +358,8 @@ height: 361px;
   text-align: center;
   background: #000000;
   color: white;
-  margin: 48px 0 37px;
+  margin: 19px 0 0;
   border-radius: 2px;
-
 } 
 
 .form__buttod:hover {
@@ -352,12 +381,11 @@ height: 361px;
 }
 
 @media screen and (max-width: 640px) {
-  .popup__container {
-    margin: 123px auto 0;
-    max-width: 282px;
-    max-height: 322px;
+  .form {
+    width: 282px;
+    height: 322px;
   }
-
+  
   .form__text {
     width: 238px;
   }
@@ -367,10 +395,11 @@ height: 361px;
     height: 46px;
     font-size: 14px;
     line-height: 17px;
-    margin: 45px 0 25px;
+    margin-top: 16px;
   } 
   
   .form__header {
+    margin: 25px 0 62px;
     font-size: 18px;
     line-height: 22px;
   }
