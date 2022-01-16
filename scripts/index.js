@@ -19,7 +19,7 @@ popupCloseButton.addEventListener('click', closePopup);
 
 let nameInput = document.querySelector('.name-input');
 let jobInput =  document.querySelector('.job-input');
-let saveFormButton = document.querySelector('.form__buttod');
+let saveFormButton = document.querySelector('.form__button');
 let profileInfo = document.querySelector('.profile__info');
 
 let profileName = document.querySelector('.profile__name');
@@ -33,5 +33,3 @@ function formSubmitHandler (evt) {
 }
 
 saveFormButton.addEventListener('click', formSubmitHandler);
-
-// добавление данных из форм 
