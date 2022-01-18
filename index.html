@@ -12,18 +12,20 @@
   <div class="page">
     <header class="header">
       <div class="header__logo"></div>
-      <div class="border"></div>
     </header>
     <main class="content">
       <section class="profile">
-        <div class="profil">
+        <div class="profile__container">
           <div class="profile__avatar"></div>
           <div class="profile__info">
-            <h2 class="profile__name">Жак-Ив Кусто<a href="#" class="button profile__edit-button"></a></h2>
+            <div class="profile__redact">
+              <h1 class="profile__name">Жак-Ив Кусто</h1>
+              <button type="button" class="button profile__edit-button"></button>
+            </div>
             <p class="profile__text">Исследователь океана</p>
           </div>
         </div>
-        <a href="#" class="button profile__add-button"></a>
+        <button type="button" href="#" class="button profile__add-button"></button>
       </section>
       <section class="cards">
         <ul class="card cards__card">
@@ -31,54 +33,54 @@
             <img src="images/cards/kirill-pershin-1088404-unsplash-2.png" alt="Карачаевск" class="card__image">
             <div class="card__block">
               <h3 class="card__name">Карачаевск</h3>
-              <a href="#" class="card__like"></a>
+              <button type="button" href="#" class="card__like"></button>
             </div>
           </li>
           <li class="card__item">
             <img src="images/cards/kirill-pershin-1404681-unsplash.png" alt="Гора Эльбрус" class="card__image">
             <div class="card__block">
               <h3 class="card__name">Гора Эльбрус</h3>
-              <a href="#" class="card__like"></a>
+              <button type="button" href="#" class="card__like"></button>
             </div>
           </li>
           <li class="card__item">
             <img src="images/cards/kirill-pershin-1556355-unsplash.png" alt="Домбай" class="card__image">
             <div class="card__block">
               <h3 class="card__name">Домбай</h3>
-              <a href="#" class="card__like"></a>
+              <button type="button" href="#" class="card__like"></button>
             </div>
           </li>
           <li class="card__item">
             <img src="images/cards/kirill-pershin-1556355-unsplash.png" alt="Гора Эльбрус" class="card__image">
             <div class="card__block">
               <h3 class="card__name">Гора Эльбрус</h3>
-              <a href="#" class="card__like"></a>
+              <button type="button" href="#" class="card__like"></button>
             </div>
           </li>
           <li class="card__item">
             <img src="images/cards/kirill-pershin-1404681-unsplash.png" alt="Домбай" class="card__image">
             <div class="card__block">
               <h3 class="card__name">Домбай</h3>
-              <a href="#" class="card__like"></a>
+              <button type="button" href="#" class="card__like"></button>
             </div>
           </li>
           <li class="card__item">
             <img src="images/cards/kirill-pershin-1088404-unsplash-2.png" alt="Карачаево-Черкессия" class="card__image">
             <div class="card__block">
               <h3 class="card__name">Карачаево-Черкессия</h3>
-              <a href="#" class="card__like"></a>
+              <button type="button" href="#" class="card__like"></button>
             </div>
           </li>
         </ul>
       </section>
-      <div class="popup popup_opened">
+      <div class="popup">
         <div class="popup__container">
-          <form action="" class="popup__form form">
-            <a href="#" class="form__close"></a>
-            <h3 class="form__header">Редактировать профиль</h3>
-            <input type="text" class="form__text">
-            <input type="text" class="form__text">
-            <input type="submit" class="form__buttod" value="Сохранить">Сохранить
+          <form name="form-popup" class="popup__form form">
+            <button type="button" class="form__close"></button>
+            <h2 class="form__header">Редактировать профиль</h2>
+            <input type="text" name="firstname" value="Жак-Ив Кусто" class="form__text form_input_name">
+            <input type="text" name="about-me" value="Исследователь океана" class="form__text form_input_job">
+            <input type="submit" class="form__button" value="Сохранить">
           </form>
         </div>
       </div>
@@ -87,6 +89,7 @@
       <p class="footer__author">&copy;2021 Сергей Веселов</p>
     </footer>
   </div>
+  <script src="scripts/index.js"> </script>
 </body>
 
 </html>
